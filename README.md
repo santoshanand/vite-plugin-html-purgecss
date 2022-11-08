@@ -11,11 +11,11 @@ This [Vite](https://github.com/vitejs/vite) plugin purges CSS based on HTML outp
 ## Install
 **Yarn**
 ```
-yarn add vite-plugin-html-purgecss -D
+yarn add vite-plugin-html-purgecss-v3 -D
 ```
 or **npm**
 ```
-npm i vite-plugin-html-purgecss --save-dev
+npm i vite-plugin-html-purgecss-v3 --save-dev
 ```
 
 ## Usage

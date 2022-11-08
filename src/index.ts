@@ -1,6 +1,6 @@
-import PurgeCSS, { UserDefinedSafelist } from "purgecss";
-
-export default (safeList?: UserDefinedSafelist) => {
+import { PurgeCSS, UserDefinedSafelist } from 'purgecss';
+import { PluginOption } from 'vite';
+export default (safeList?: UserDefinedSafelist):PluginOption => {
     let _html: string = '';
     return {
         name: 'vite-plugin-html-purgecss',
@@ -12,10 +12,10 @@ export default (safeList?: UserDefinedSafelist) => {
             for (const file of cssFiles) {
                 const purged = await new PurgeCSS().purge({
                     content: [{raw: _html, extension: 'html'}],
-                    css: [{raw: bundle[file].source}],
+                    css: [{raw: bundle[file].fileName}],
                     safelist: safeList || []
                 });
-                bundle[file].source = purged[0].css;
+                bundle[file].fileName = purged[0].css;
             }
         }
     }

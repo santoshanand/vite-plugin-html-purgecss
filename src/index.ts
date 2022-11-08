@@ -3,7 +3,7 @@ import { PluginOption } from 'vite';
 export default (safeList?: UserDefinedSafelist):PluginOption => {
     let _html: string = '';
     return {
-        name: 'vite-plugin-html-purgecss',
+        name: 'vite-plugin-html-purgecss-v3',
         enforce: 'post',
         transformIndexHtml(html) { _html += html;},
         async generateBundle(_options, bundle) {

@@ -1,4 +1,7 @@
-# vite-plugin-html-purgecss
+## It is a fork of https://github.com/Jax-p/vite-plugin-html-purgecss
+
+
+# vite-plugin-html-purgecss-v3
 This [Vite](https://github.com/vitejs/vite) plugin purges CSS based on HTML output using [PurgeCSS](https://github.com/FullHuman/purgecss).
 
 ✔️ Works with Multi Page App   
